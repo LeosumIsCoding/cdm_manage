@@ -1,0 +1,30 @@
+
+
+server:
+  port: 1010
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/jimo?serverTimezone=UTC
+      username: root
+      password: 123456
+  servlet:
+    multipart:
+      max-file-size: 15360MB
+      max-request-size: 15360MB
+  mail:
+    protocol: smtp
+    host: smtp.sina.com
+    username: h3321566631@sina.com
+    password: e9544fdd7a686d86
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
