@@ -112,6 +112,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(password);
         user.setHeader(header);
         user.setEmail(email);
+        System.out.println(user);
         Integer insert =userMapper.insert(user);
         return insert;
     }

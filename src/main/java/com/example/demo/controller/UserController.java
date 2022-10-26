@@ -73,19 +73,12 @@ public class UserController {
      */
     @PostMapping("/login")
     public User userLogin(String username, String password, String keyCode, Integer type, String code) {
-        String codeVal = "4536";
+        String codeVal = keyCode;
         User loginUser = userService.userLogin(username, password, type);
         System.out.println(loginUser);
 
         if (loginUser != null) {
-            if (codeVal.equals(code)) {
                 return loginUser;
-            } else {
-                User errUser = new User();
-                errUser.setUsername("-1");
-                return errUser;
-            }
-
         } else {
             return null;
         }
