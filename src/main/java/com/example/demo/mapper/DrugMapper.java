@@ -20,4 +20,6 @@ public interface DrugMapper extends BaseMapper<Drug> {
 
     @Select("select * from ${tableName}")
     List<Drug> getListByDrugName(Map<String, Object> map);
+
+
 }
