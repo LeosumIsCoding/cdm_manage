@@ -18,6 +18,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -154,5 +155,10 @@ public class UserController {
         }
         return "上传失败!";
 
+    }
+    @GetMapping("/get/all-user")
+    @ResponseBody
+    public ArrayList<User> getAllUser(){
+        return userService.getAllUser();
     }
 }

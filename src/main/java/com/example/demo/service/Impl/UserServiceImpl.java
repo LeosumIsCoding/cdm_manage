@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
@@ -127,5 +128,12 @@ public class UserServiceImpl implements UserService {
         int i = userMapper.updateById(user);
         return i;
     }
+
+    @Override
+    public ArrayList<User> getAllUser() {
+        ArrayList<User> users = userMapper.getAllUser();
+        return users;
+    }
+
 
 }
